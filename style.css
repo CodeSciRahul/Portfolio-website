@@ -224,3 +224,226 @@ i{
     color: white;
     transition: all 0.4s ease-in-out;
 }
+.skills {
+   
+    background-color: var(--bg);
+}
+.img_1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+   padding: 20px 0;
+}
+.bar{
+    width: 80vh;
+    height: 5px;
+    background-color: #c3cad5;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+}
+.bar .circle{
+    width: 0;
+    height: 5px;
+    border-radius: 5px;
+    background-color: red;
+    position: absolute;
+    z-index: 10;
+    top: 0px;
+    left:0;
+    box-shadow: 1px 1px 15px rgba(220,20,20,0.8);
+    animation: loader 5s forwards cubic-bezier(0,0,0,0);
+}
+.bar h3{
+    margin: 10px 0;
+    color: white;
+}
+
+@keyframes loader {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+    
+}
+.skills .img_1 img{
+    width: 80px;
+    aspect-ratio: 3 / 3; 
+    border-radius: 50%;
+    object-fit: cover;
+    color: white;
+}
+.skills .img_1:nth-child(2) .bar .circle
+{
+    animation:loader1 5s forwards ease-in-out;
+}
+@keyframes loader1{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+.skills .img_1:nth-child(3) .bar .circle
+{
+    animation:loader2 6s forwards cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+@keyframes loader2{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+}
+.skills .img_1:nth-child(4) .bar .circle
+{
+    animation:loader3 8s forwards ease;
+}
+@keyframes loader3{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 85%;
+    }
+}
+.skills .img_1:nth-child(5) .bar .circle
+{
+    animation:loader4 4s forwards ease;
+}
+@keyframes loader4{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 75%;
+    }
+}
+.Project{
+    background-color: var(--bg1);
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(355px,auto));
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    gap: 2.3rem;
+    padding: 40px 0;
+    color: white;
+    line-height: 2.5rem;
+}
+.Project div{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 2px solid rgb(128, 112, 217);
+    border-radius: 15px;
+    width: 300px;
+   min-height: 350px;
+
+}
+.Project div img{
+    margin-top: 40px;
+    width: 200px;
+    height: 200px;
+    aspect-ratio: 1 / 1.2;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: drop-shadow(2px 2px 10px rgba(20, 159, 228, 0.492));
+}
+.Project div h3{
+    font-size: 1.5rem;
+}
+.Project div span label a{
+    color: white;
+}
+#visit{
+    margin-left: 70px;
+    border: 1px solid rgb(117, 99, 219);
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+#visit i{
+    font-size: 1.1rem;
+}
+.Contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg);
+}
+.Contact form{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 20px;
+    min-height: 50vh;
+    margin: 30px 0;
+}
+form h1{
+    margin:0 auto;
+    font-size: 2rem;
+    color:#0f86ee;
+}
+input{
+    outline: none;
+    border: 2px solid rgb(16, 153, 195);
+    border-radius: 5px;
+    padding: 0 10px;
+}
+input[type="text"],input[type="email"]
+{
+    padding: 10px 10px;
+    font-weight:bold;
+    color: #3468ee;
+}
+textarea{
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid  rgb(16, 153, 195);
+    padding:10px 20px;
+    font-weight:bold;
+    color:#063171;
+    
+}
+input[type="submit"]
+{
+    font-weight: bold;
+    width: 150px;
+    margin: 0 auto;
+    padding: 5px 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.btn1{
+    color: #0f86ee;
+}
+.btn1:hover{
+    background-color: #0f86ee;
+    color: white;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 2px 2px 20px rgba(220, 220, 220, 0.56);
+}
+.succesbtn{
+    background-color: rgba(40, 214, 40, 0.638);
+    color: white;
+    box-shadow: 2px 2px 20px rgba(40, 214, 40, 0.638);
+    border: 2px solid rgb(113, 222, 113);
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgb(16, 14, 14);
+    min-height: 80px;
+    font-size: 1.2rem;
+}
+footer .text{
+    text-align: center;
+}
