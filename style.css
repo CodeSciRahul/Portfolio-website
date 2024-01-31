@@ -16,8 +16,16 @@
     --i-font:1.7rem;
     --bg1:#191d21;
 }
+a:hover{
+    opacity: 0.7;
+   
+}
+i:hover{
+     transform: scale(1.1);
+}
 header{
     background-color: var(--bg);
+    position: relative;
 }
 header nav{
     display: flex;
@@ -33,11 +41,20 @@ header nav h1::first-letter{
 }
 nav .icon{
     display: none;
+    cursor: pointer;
+}
+nav ul li:hover{
+    transform: scale(1.1);
+}
+nav ul,main .intro ul{
+    display: flex;
 }
 ul{
-    display: flex;
     gap: 20px;
     color: white;
+}
+header .list{
+    display: none;
 }
  header a{
     text-decoration: none;
@@ -57,7 +74,7 @@ a:hover::after {
 main{
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     align-items: center;
     min-height: calc(100vh - 100px);
     color: white;
@@ -79,8 +96,11 @@ main .intro h1::after{
     font-size: var(--h1-font);
     margin-left:10px;
 }
+main .intro h1{
+    margin-bottom: -25px;
+}
 main .intro p{
-    margin: 50px 0;
+    margin: 35px 0;
     font-size: var(--p-font);
     width: 60vh;
     letter-spacing: 0.08rem;
@@ -148,6 +168,7 @@ main .intro_img img{
     top: 0;
     left: 0;
     z-index: 5;
+    filter: drop-shadow(2px 2px 10px rgba(11, 60, 130, 0.492));
 }
 i{
     font-size: var(--i-font);
@@ -181,6 +202,7 @@ i{
     position: absolute;
     top: 0;
     left: 0;
+    filter: drop-shadow(2px 2px 10px rgba(20, 159, 228, 0.492));
 }
 .About .about_rahul{
     margin: 40px 0;
@@ -344,7 +366,12 @@ i{
     border-radius: 15px;
     width: 300px;
    min-height: 350px;
+   line-height: 3.5rem;
 
+}
+.Project div:hover{
+    transform: scale(1.04);
+    transition: all 0.3s ease-in-out;
 }
 .Project div img{
     margin-top: 40px;
@@ -389,6 +416,15 @@ form h1{
     margin:0 auto;
     font-size: 2rem;
     color:#0f86ee;
+    text-shadow: 2px 2px 10px rgba(20, 159, 228, 0.492);
+}
+form div{
+    text-align: center;
+}
+form div h4{
+    color: rgba(22, 207, 22, 0.789);
+    text-shadow: 2px 2px 10px rgba(22, 207, 22, 0.789);
+    font-size: 1.2rem;
 }
 input{
     outline: none;
@@ -433,7 +469,7 @@ input[type="submit"]
     background-color: rgba(40, 214, 40, 0.638);
     color: white;
     box-shadow: 2px 2px 20px rgba(40, 214, 40, 0.638);
-    border: 2px solid rgb(113, 222, 113);
+    border: 2px solid rgba(40, 214, 40, 0.638);
 }
 footer{
     display: flex;
@@ -446,4 +482,105 @@ footer{
 }
 footer .text{
     text-align: center;
+}
+
+
+/* responsive design */
+
+@media (max-width:670px) {
+    nav .icon{
+        display: block;
+    }
+    nav .icon i:last-child{
+        display: none;
+    }
+    header nav ul{
+        display: none;
+    }
+    header .list{
+        position: absolute;
+        z-index: 20;
+        width: calc(100vw - 17px);
+        text-align: center;
+        background-color: #0f86ee;
+    }
+    header .list ul{
+        line-height: 5rem;
+        font-weight: 900;
+        font-size: 1.5rem;
+    }
+    header .list ul div{
+        margin: 0 auto;
+        width: 95%;
+        height: 2px;
+        background-color: var(--bg1);
+    }
+}
+@media (max-width:375px) {
+    main .intro p::first-letter{
+        font-size: 1.5rem;
+    }
+    main .intro{
+        margin-left: 20px;
+    }
+    main .intro h1{
+        font-size: 1.5rem;
+        
+    }
+    main .intro h1::after{
+        font-size: 2.5rem;
+    }
+    i{
+        font-size: 1.2rem;
+    }
+    button{
+        padding: 5px;
+    }
+    main .intro_img,.About .About_img{
+        width: 300px;
+        height: 300px;
+        margin-bottom: -20px;
+    }
+    main .intro_img img,.About .About_img img{
+        width: 290px;
+        height: 290px;
+    }
+    main .intro ul li a img
+{
+    width: 22px;
+}
+.About .about_rahul{
+    margin-left: 20px;
+    line-height: 2.2rem;
+}
+.About .about_rahul h1{
+    font-size: 1.5rem;
+}
+.About .about_rahul p{
+    font-size: 0.8rem;
+}
+.About .About_img{
+    margin-top: -40px;
+}
+
+.About .about_rahul span{
+    font-size: 1.1rem;
+}
+.About .about_rahul .btn button,main .intro .btn button{
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+.skills .img_1 img{
+    width: 50px;
+    margin: 0 15px;
+}
+.bar{
+    width: 40vh;
+}
+textarea{
+    width: 300px;
+}
+footer{
+    font-size: 0.8rem;
+}
 }

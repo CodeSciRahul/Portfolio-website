@@ -1,5 +1,19 @@
-let marks=document.getElementById("h31").innerText;
+let line_icon=document.querySelector("nav .icon i:first-child");
+let cross_icon=document.querySelector("nav .icon i:last-child")
+line_icon.addEventListener("click",()=>{
+    let new_nav=document.querySelector("header .list");
+    new_nav.style.display="block";
+    line_icon.style.display="none";
+    cross_icon.style.display="block";
+})
+cross_icon.addEventListener("click",()=>{
+    let new_nav=document.querySelector("header .list");
+    new_nav.style.display="none";
+    line_icon.style.display="block";
+    cross_icon.style.display="none";
+})
 
+let marks=document.getElementById("h31").innerText;
 let counter=0;
 setInterval(() => {
     if(marks==70)
@@ -59,7 +73,19 @@ form.addEventListener("submit",(event)=>{
     event.preventDefault();
     let btn=document.querySelector("#formbtn");
     btn.className="succesbtn";
-    let msg=form.appendChild("h4");  
-    msg.innerText="Message sent succesfully";
-    msg.style.Color="green";  
+    let h4=document.createElement("h4");
+    h4.innerText="message successfully sent"
+    let form=document.querySelector("form div");
+    form.appendChild(h4);
+    let input=document.querySelectorAll("form input");
+    let txtarea=document.querySelector("form textarea");
+    const key="name";
+    const key1="email";
+    const key2="user_message";
+    localStorage.setItem(key,input[0].value);
+    localStorage.setItem(key1,input[1].value);
+    localStorage.setItem(key2,txtarea.value);
+    input[0].value=" ";
+    input[1].value=" ";
+    txtarea.value=" ";
 })
