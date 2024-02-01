@@ -1,33 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-*{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family:'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     list-style: none;
     scroll-behavior: smooth;
 }
-:root{
-    --bg:#1b1f24;
-    --text-color:#fff;
-    --other-color:#c3cad5;
-    --h1-font:4.5rem;
-    --p-font:1.3rem;
-    --i-font:1.7rem;
-    --bg1:#191d21;
+
+:root {
+    --bg: #1b1f24;
+    --text-color: #fff;
+    --other-color: #c3cad5;
+    --h1-font: 4.5rem;
+    --p-font: 1.3rem;
+    --i-font: 1.7rem;
+    --bg1: #191d21;
 }
-a:hover{
+
+a:hover {
     opacity: 0.7;
-   
+
 }
-i:hover{
-     transform: scale(1.1);
+
+i:hover {
+    transform: scale(1.1);
 }
-header{
+
+header {
     background-color: var(--bg);
     position: relative;
 }
-header nav{
+
+header nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -35,88 +41,109 @@ header nav{
     height: 70px;
     padding: 50px 0;
 }
-header nav h1::first-letter{
+
+header nav h1::first-letter {
     font-size: 3rem;
     color: #1276cd;
 }
-nav .icon{
+
+nav .icon {
     display: none;
     cursor: pointer;
 }
-nav ul li:hover{
+nav .change-icon i{
+    cursor: pointer;
+}
+nav ul li:hover {
     transform: scale(1.1);
 }
-nav ul,main .intro ul{
+
+nav ul,
+main .intro ul {
     display: flex;
 }
-ul{
+
+ul {
     gap: 20px;
     color: white;
 }
-header .list{
+
+header .list {
     display: none;
 }
- header a{
+
+header a {
     text-decoration: none;
     color: white;
     font-size: 1.15rem;
 }
-header a:hover{
+
+header a:hover {
     text-decoration: underline;
     text-decoration-color: #1276cd;
     text-decoration-thickness: 2px;
-    transform:scalex(2);
+    transform: scalex(2);
 }
+
 a:hover::after {
-    transform: scaleX(1); /* Expand the underline on hover */
-  }
-  
-main{
+    transform: scaleX(1);
+    /* Expand the underline on hover */
+}
+
+main {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap-reverse;
     align-items: center;
-    min-height: calc(100vh - 100px);
+    min-height: calc(100vh - 180px);
     color: white;
 }
-main .intro{
+
+main .intro {
     margin: 30px 0;
 }
-main .intro ul li a img
-{
+
+main .intro ul li a img {
     width: 30px;
 }
-main .intro h1::first-letter{
+
+main .intro h1::first-letter {
     font-size: var(--h1-font);
     width: 60vh;
     color: #1276cd;
 }
-main .intro h1::after{
+
+main .intro h1::after {
     content: '👋';
     font-size: var(--h1-font);
-    margin-left:10px;
+    margin-left: 10px;
 }
-main .intro h1{
+
+main .intro h1 {
     margin-bottom: -25px;
 }
-main .intro p{
+
+main .intro p {
     margin: 35px 0;
     font-size: var(--p-font);
     width: 60vh;
     letter-spacing: 0.08rem;
 }
-main .intro p::first-letter{
+
+main .intro p::first-letter {
     font-size: 2.2rem;
 }
-main .intro p span{
+
+main .intro p span {
     color: #0f86ee;
     font-weight: bold;
 }
-main .intro p span::first-letter
-{
+
+main .intro p span::first-letter {
     font-size: 3rem;
 }
-main .intro .btn button{
+
+main .intro .btn button {
     margin: 25px 0;
     padding: 10px 20px;
     border-radius: 10px;
@@ -127,73 +154,81 @@ main .intro .btn button{
     background-color: #3468ee;
     color: white;
 }
-main .intro .btn button:nth-child(1)
-{
+
+main .intro .btn button:nth-child(1) {
     background-color: transparent;
     color: #3468ee;
     margin-right: 25px;
 }
-main .intro .btn button:nth-child(1):hover
-{
+
+main .intro .btn button:nth-child(1):hover {
     background-color: #3468ee;
     color: white;
 }
-main .intro .btn button:hover{
+
+main .intro .btn button:hover {
     background-color: transparent;
     color: #3468ee;
     transition: all 0.5s ease-in-out;
     box-shadow: 2px 2px 20px rgba(220, 220, 220, 0.56);
 }
-button:active{
+
+button:active {
     transform: translateY(2px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.01s, box-shadow 0.1s;
 }
-main .intro_img{
+
+main .intro_img {
     margin: 30px 0;
     width: 400px;
     height: 400px;
-    border-radius:50%;
+    border-radius: 50%;
     border: 7px solid #578ab7;
     position: relative;
     z-index: 2;
     padding: 22px;
     box-shadow: 0px 0px 5px 7px #0c87f0a3;
 }
-main .intro_img img{
+
+main .intro_img img {
     width: 390px;
     height: 390px;
-    border-radius:50%;
+    border-radius: 50%;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 5;
     filter: drop-shadow(2px 2px 10px rgba(11, 60, 130, 0.492));
 }
-i{
+
+i {
     font-size: var(--i-font);
 }
-.About{
+
+.About {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap-reverse;
-    background-color:var(--bg1);
+    flex-wrap: wrap;
+    background-color: var(--bg1);
     color: white;
     min-height: 80vh;
 }
-.About .About_img{
+
+.About .About_img {
     margin: 40px 0;
     width: 400px;
     height: 400px;
-    border-radius:50%;
+    border-radius: 50%;
     border: 7px solid #578ab7;
     position: relative;
     z-index: 5;
-    padding: 22px;
+    padding: 0 22px;
     box-shadow: 0px 0px 5px 7px #0c87f0a3;
 }
-.About .About_img img{
+
+.About .About_img img {
     width: 390px;
     height: 390px;
     background-size: cover;
@@ -204,32 +239,40 @@ i{
     left: 0;
     filter: drop-shadow(2px 2px 10px rgba(20, 159, 228, 0.492));
 }
-.About .about_rahul{
+
+.About .about_rahul {
     margin: 40px 0;
     line-height: 2.9rem;
 }
-.About .about_rahul h1{
+
+.About .about_rahul h1 {
     font-size: 2rem;
 }
-.About .about_rahul p{
+
+.About .about_rahul p {
     font-size: var(--p-font);
-    color:rgba(220, 220, 220, 0.56);
+    color: rgba(220, 220, 220, 0.56);
 }
-.About .about_rahul p span{
+
+.About .about_rahul p span {
     padding-right: 12px;
 }
-.About .about_rahul div{
+
+.About .about_rahul div {
     font-size: var(--p-font);
 }
-.About .about_rahul div span{
+
+.About .about_rahul div span {
     color: #0f86ee;
     font-weight: bold;
     font-size: 1.5rem;
 }
-.About .about_rahul span{
+
+.About .about_rahul span {
     color: white;
 }
-.About .about_rahul .btn button{
+
+.About .about_rahul .btn button {
     margin: 25px 0;
     padding: 10px 15px;
     border-radius: 10px;
@@ -237,26 +280,35 @@ i{
     border: 3px solid #3468ee;
     outline: none;
     cursor: pointer;
-    background-color:transparent;
+    background-color: transparent;
     color: #3468ee;
     box-shadow: 2px 2px 20px rgba(220, 220, 220, 0.56);
 }
-.About .about_rahul .btn button:hover{
+
+.About .about_rahul .btn button:hover {
     background-color: #3468ee;
     color: white;
     transition: all 0.4s ease-in-out;
 }
+
 .skills {
-   
+
     background-color: var(--bg);
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
 }
-.img_1{
+
+.img_1 {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-   padding: 20px 0;
+    padding: 20px 0;
 }
-.bar{
+
+.bar {
     width: 80vh;
     height: 5px;
     background-color: #c3cad5;
@@ -264,7 +316,8 @@ i{
     position: relative;
     z-index: 1;
 }
-.bar .circle{
+
+.bar .circle {
     width: 0;
     height: 5px;
     border-radius: 5px;
@@ -272,83 +325,95 @@ i{
     position: absolute;
     z-index: 10;
     top: 0px;
-    left:0;
-    box-shadow: 1px 1px 15px rgba(220,20,20,0.8);
-    animation: loader 5s forwards cubic-bezier(0,0,0,0);
+    left: 0;
+    box-shadow: 1px 1px 15px rgba(220, 20, 20, 0.8);
+    animation: loader 5s forwards cubic-bezier(0, 0, 0, 0);
 }
-.bar h3{
+
+.bar h3 {
     margin: 10px 0;
     color: white;
 }
 
 @keyframes loader {
-    0%{
+    0% {
         width: 0%;
     }
-    100%{
+
+    100% {
         width: 70%;
     }
-    
+
 }
-.skills .img_1 img{
+
+.skills .img_1 img {
     width: 80px;
-    aspect-ratio: 3 / 3; 
+    aspect-ratio: 3 / 3;
     border-radius: 50%;
     object-fit: cover;
     color: white;
 }
-.skills .img_1:nth-child(2) .bar .circle
-{
-    animation:loader1 5s forwards ease-in-out;
+
+.skills .img_1:nth-child(2) .bar .circle {
+    animation: loader1 5s forwards ease-in-out;
 }
-@keyframes loader1{
-    0%{
+
+@keyframes loader1 {
+    0% {
         width: 0%;
     }
-    100%{
+
+    100% {
         width: 80%;
     }
 }
-.skills .img_1:nth-child(3) .bar .circle
-{
-    animation:loader2 6s forwards cubic-bezier(0.39, 0.575, 0.565, 1);
+
+.skills .img_1:nth-child(3) .bar .circle {
+    animation: loader2 6s forwards cubic-bezier(0.39, 0.575, 0.565, 1);
 }
-@keyframes loader2{
-    0%{
+
+@keyframes loader2 {
+    0% {
         width: 0%;
     }
-    100%{
+
+    100% {
         width: 90%;
     }
 }
-.skills .img_1:nth-child(4) .bar .circle
-{
-    animation:loader3 8s forwards ease;
+
+.skills .img_1:nth-child(4) .bar .circle {
+    animation: loader3 8s forwards ease;
 }
-@keyframes loader3{
-    0%{
+
+@keyframes loader3 {
+    0% {
         width: 0%;
     }
-    100%{
-        width: 85%;
+
+    100% {
+        width: 90%;
     }
 }
-.skills .img_1:nth-child(5) .bar .circle
-{
-    animation:loader4 4s forwards ease;
+
+.skills .img_1:nth-child(5) .bar .circle {
+    animation: loader4 4s forwards ease;
 }
-@keyframes loader4{
-    0%{
+
+@keyframes loader4 {
+    0% {
         width: 0%;
     }
-    100%{
-        width: 75%;
+
+    100% {
+        width: 80%;
     }
 }
-.Project{
+
+.Project {
     background-color: var(--bg1);
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(355px,auto));
+    grid-template-columns: repeat(auto-fit, minmax(355px, auto));
     align-items: center;
     align-content: center;
     justify-content: center;
@@ -358,22 +423,25 @@ i{
     color: white;
     line-height: 2.5rem;
 }
-.Project div{
+
+.Project div {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     border: 2px solid rgb(128, 112, 217);
     border-radius: 15px;
     width: 300px;
-   min-height: 350px;
-   line-height: 3.5rem;
+    min-height: 350px;
+    line-height: 3.5rem;
 
 }
-.Project div:hover{
+
+.Project div:hover {
     transform: scale(1.04);
     transition: all 0.3s ease-in-out;
 }
-.Project div img{
+
+.Project div img {
     margin-top: 40px;
     width: 200px;
     height: 200px;
@@ -382,28 +450,34 @@ i{
     border-radius: 10px;
     filter: drop-shadow(2px 2px 10px rgba(20, 159, 228, 0.492));
 }
-.Project div h3{
+
+.Project div h3 {
     font-size: 1.5rem;
 }
-.Project div span label a{
+
+.Project div span label a {
     color: white;
 }
-#visit{
+
+#visit {
     margin-left: 70px;
     border: 1px solid rgb(117, 99, 219);
     padding: 3px 10px;
     border-radius: 5px;
 }
-#visit i{
+
+#visit i {
     font-size: 1.1rem;
 }
-.Contact{
+
+.Contact {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--bg);
 }
-.Contact form{
+
+.Contact form {
     display: flex;
     flex-direction: column;
     /* align-items: center; */
@@ -412,43 +486,49 @@ i{
     min-height: 50vh;
     margin: 30px 0;
 }
-form h1{
-    margin:0 auto;
+
+form h1 {
+    margin: 0 auto;
     font-size: 2rem;
-    color:#0f86ee;
+    color: #0f86ee;
     text-shadow: 2px 2px 10px rgba(20, 159, 228, 0.492);
 }
-form div{
+
+form div {
     text-align: center;
 }
-form div h4{
+
+form div h4 {
     color: rgba(22, 207, 22, 0.789);
     text-shadow: 2px 2px 10px rgba(22, 207, 22, 0.789);
     font-size: 1.2rem;
 }
-input{
+
+input {
     outline: none;
     border: 2px solid rgb(16, 153, 195);
     border-radius: 5px;
     padding: 0 10px;
 }
-input[type="text"],input[type="email"]
-{
+
+input[type="text"],
+input[type="email"] {
     padding: 10px 10px;
-    font-weight:bold;
+    font-weight: bold;
     color: #3468ee;
 }
-textarea{
+
+textarea {
     border-radius: 5px;
     outline: none;
-    border: 2px solid  rgb(16, 153, 195);
-    padding:10px 20px;
-    font-weight:bold;
-    color:#063171;
-    
+    border: 2px solid rgb(16, 153, 195);
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #063171;
+
 }
-input[type="submit"]
-{
+
+input[type="submit"] {
     font-weight: bold;
     width: 150px;
     margin: 0 auto;
@@ -456,22 +536,26 @@ input[type="submit"]
     font-size: 1.2rem;
     cursor: pointer;
 }
-.btn1{
+
+.btn1 {
     color: #0f86ee;
 }
-.btn1:hover{
+
+.btn1:hover {
     background-color: #0f86ee;
     color: white;
     transition: all 0.5s ease-in-out;
     box-shadow: 2px 2px 20px rgba(220, 220, 220, 0.56);
 }
-.succesbtn{
+
+.succesbtn {
     background-color: rgba(40, 214, 40, 0.638);
     color: white;
     box-shadow: 2px 2px 20px rgba(40, 214, 40, 0.638);
     border: 2px solid rgba(40, 214, 40, 0.638);
 }
-footer{
+
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -479,8 +563,31 @@ footer{
     background-color: rgb(16, 14, 14);
     min-height: 80px;
     font-size: 1.2rem;
+    position: relative;
 }
-footer .text{
+
+footer span {
+    position: absolute;
+    top: -70px;
+    left: 90%;
+    right: 30%;
+    background-color: #0f86ee;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+footer span a {
+    color: white;
+
+}
+
+footer .text {
     text-align: center;
 }
 
@@ -488,99 +595,163 @@ footer .text{
 /* responsive design */
 
 @media (max-width:670px) {
-    nav .icon{
+    nav .icon {
         display: block;
     }
-    nav .icon i:last-child{
+
+    nav .icon i:last-child {
         display: none;
     }
-    header nav ul{
+
+    header nav ul {
         display: none;
     }
-    header .list{
+
+    header .list {
         position: absolute;
         z-index: 20;
         width: calc(100vw - 17px);
         text-align: center;
         background-color: #0f86ee;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    header .list ul{
+
+    header .list ul {
         line-height: 5rem;
         font-weight: 900;
         font-size: 1.5rem;
     }
-    header .list ul div{
+
+    header .list ul li a:hover {
+        text-decoration-color: var(--bg);
+    }
+
+    header .list ul div {
         margin: 0 auto;
         width: 95%;
         height: 2px;
         background-color: var(--bg1);
     }
+
+    .skills .img_1 img {
+        width: 60px;
+        margin: 0 15px;
+    }
+
+    .bar {
+        width: 50vh;
+    }
 }
-@media (max-width:375px) {
-    main .intro p::first-letter{
+
+@media (max-width:500px) {
+    main .intro p::first-letter {
+        font-size: 2rem;
+    }
+
+    main .intro {
+        margin: 0 20px;
+        overflow-x: hidden;
+    }
+
+    main .intro ul {
+        justify-content: center;
+        gap: 50px;
+    }
+
+    main .intro ul li a i,
+    img {
+        font-size: 2rem;
+    }
+
+    #leetcode {
+        width: 37px;
+    }
+
+    main .intro .btn,
+    .About .about_rahul .btn {
+        text-align: center;
+    }
+
+    main .intro h1,
+    p {
         font-size: 1.5rem;
+        width: 100%;
+        text-wrap: wrap;
     }
-    main .intro{
-        margin-left: 20px;
+
+    main .intro h1::after {
+        font-size: 2rem;
     }
-    main .intro h1{
-        font-size: 1.5rem;
-        
-    }
-    main .intro h1::after{
-        font-size: 2.5rem;
-    }
-    i{
-        font-size: 1.2rem;
-    }
-    button{
-        padding: 5px;
-    }
-    main .intro_img,.About .About_img{
-        width: 300px;
-        height: 300px;
+
+    main .intro_img {
         margin-bottom: -20px;
     }
-    main .intro_img img,.About .About_img img{
+
+    main .intro_img,
+    .About .About_img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .About .About_img {
+        top: 80px;
+        margin-bottom: 80px;
+    }
+
+    main .intro_img img,
+    .About .About_img img {
         width: 290px;
         height: 290px;
     }
-    main .intro ul li a img
-{
-    width: 22px;
-}
-.About .about_rahul{
-    margin-left: 20px;
-    line-height: 2.2rem;
-}
-.About .about_rahul h1{
-    font-size: 1.5rem;
-}
-.About .about_rahul p{
-    font-size: 0.8rem;
-}
-.About .About_img{
-    margin-top: -40px;
-}
 
-.About .about_rahul span{
-    font-size: 1.1rem;
-}
-.About .about_rahul .btn button,main .intro .btn button{
-    padding: 5px 10px;
-    border-radius: 4px;
-}
-.skills .img_1 img{
-    width: 50px;
-    margin: 0 15px;
-}
-.bar{
-    width: 40vh;
-}
-textarea{
-    width: 300px;
-}
-footer{
-    font-size: 0.8rem;
-}
+    main .intro ul li a img {
+        width: 22px;
+    }
+
+    .About .about_rahul {
+        margin-left: 20px;
+        line-height: 2.5rem;
+        width: 100vw;
+    }
+
+    .About .about_rahul h1 {
+        font-size: 2rem;
+    }
+
+    .About .about_rahul p {
+        font-size: 1rem;
+    }
+
+    .About .About_img {
+        margin-top: -40px;
+    }
+
+    .About .about_rahul span {
+        font-size: 1.1rem;
+    }
+
+    .About .about_rahul .btn button,
+    main .intro .btn button {
+        padding: 5px 10px;
+        border-radius: 4px;
+    }
+
+    .skills .img_1 img {
+        width: 50px;
+        margin: 0 15px;
+    }
+
+    .bar {
+        width: 30vh;
+    }
+
+    textarea {
+        width: 300px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
 }

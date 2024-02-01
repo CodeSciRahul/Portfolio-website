@@ -1,91 +1,102 @@
-let line_icon=document.querySelector("nav .icon i:first-child");
-let cross_icon=document.querySelector("nav .icon i:last-child")
-line_icon.addEventListener("click",()=>{
-    let new_nav=document.querySelector("header .list");
-    new_nav.style.display="block";
-    line_icon.style.display="none";
-    cross_icon.style.display="block";
+
+
+let line_icon = document.querySelector("nav .icon i:first-child");
+let cross_icon = document.querySelector("nav .icon i:last-child")
+line_icon.addEventListener("click", () => {
+    let new_nav = document.querySelector("header .list");
+    new_nav.style.display = "block";
+    line_icon.style.display = "none";
+    cross_icon.style.display = "block";
+    line_icon.style.transform = "rotate(360deg)";
 })
-cross_icon.addEventListener("click",()=>{
-    let new_nav=document.querySelector("header .list");
-    new_nav.style.display="none";
-    line_icon.style.display="block";
-    cross_icon.style.display="none";
+cross_icon.addEventListener("click", () => {
+    let new_nav = document.querySelector("header .list");
+    new_nav.style.display = "none";
+    line_icon.style.display = "block";
+    cross_icon.style.display = "none";
 })
 
-let marks=document.getElementById("h31").innerText;
-let counter=0;
+let marks = document.getElementById("h31").innerText;
+let counter = 0;
 setInterval(() => {
-    if(marks==70)
-    {
+    if (marks == 70) {
         clearInterval();
     }
-    else{
-        counter+=2;
-        document.getElementById("h31").innerText = counter+"%";
-        marks=counter;
+    else {
+        counter += 2;
+        document.getElementById("h31").innerText = counter + "%";
+        marks = counter;
     }
 }, 120);
 
-let marks_1=document.getElementById("h32").innerText;
-let counter_1=0;
+let marks_1 = document.getElementById("h32").innerText;
+let counter_1 = 0;
 setInterval(() => {
-    if(marks_1==80)
-    {
+    if (marks_1 == 80) {
         clearInterval();
     }
-    else{
-        counter_1+=2;
-        document.getElementById("h32").innerText = counter_1+"%";
-        marks_1=counter_1;
+    else {
+        counter_1 += 2;
+        document.getElementById("h32").innerText = counter_1 + "%";
+        marks_1 = counter_1;
     }
 }, 120);
 
-let marks_2=document.getElementById("h33").innerText;
-let counter_2=0;
+let marks_2 = document.getElementById("h33").innerText;
+let counter_2 = 0;
 setInterval(() => {
-    if(marks_2==90)
-    {
+    if (marks_2 == 90) {
         clearInterval();
     }
-    else{
-        counter_2+=2;
-        document.getElementById("h33").innerText = counter_2+"%";
-        marks_2=counter_2;
+    else {
+        counter_2 += 2;
+        document.getElementById("h33").innerText = counter_2 + "%";
+        marks_2 = counter_2;
     }
 }, 130);
 
-let marks_3=document.getElementById("h34").innerText;
-let counter_3=0;
+let marks_3 = document.getElementById("h34").innerText;
+let counter_3 = 0;
 setInterval(() => {
-    if(marks_3==85)
-    {
+    if (marks_3 == 90) {
         clearInterval();
     }
-    else{
-        counter_3+=2;
-        document.getElementById("h34").innerText = counter_3+"%";
-        marks_3=counter_3;
+    else {
+        counter_3 += 2;
+        document.getElementById("h34").innerText = counter_3 + "%";
+        marks_3 = counter_3;
     }
 }, 130);
-let form=document.querySelector("form");
-form.addEventListener("submit",(event)=>{
+let marks_4 = document.getElementById("h35").innerText;
+let counter_4 = 0;
+setInterval(() => {
+    if (marks_4 == 80) {
+        clearInterval();
+    }
+    else {
+        counter_4 += 2;
+        document.getElementById("h35").innerText = counter_4 + "%";
+        marks_4 = counter_4;
+    }
+}, 120);
+let form = document.querySelector("form");
+form.addEventListener("submit", (event) => {
     event.preventDefault();
-    let btn=document.querySelector("#formbtn");
-    btn.className="succesbtn";
-    let h4=document.createElement("h4");
-    h4.innerText="message successfully sent"
-    let form=document.querySelector("form div");
+    let btn = document.querySelector("#formbtn");
+    btn.className = "succesbtn";
+    let h4 = document.createElement("h4");
+    h4.innerText = "message successfully sent"
+    let form = document.querySelector("form div");
     form.appendChild(h4);
-    let input=document.querySelectorAll("form input");
-    let txtarea=document.querySelector("form textarea");
-    const key="name";
-    const key1="email";
-    const key2="user_message";
-    localStorage.setItem(key,input[0].value);
-    localStorage.setItem(key1,input[1].value);
-    localStorage.setItem(key2,txtarea.value);
-    input[0].value=" ";
-    input[1].value=" ";
-    txtarea.value=" ";
+    let input = document.querySelectorAll("form input");
+    let txtarea = document.querySelector("form textarea");
+    const key = "name";
+    const key1 = "email";
+    const key2 = "user_message";
+    localStorage.setItem(key, input[0].value);
+    localStorage.setItem(key1, input[1].value);
+    localStorage.setItem(key2, txtarea.value);
+    input[0].value = " ";
+    input[1].value = " ";
+    txtarea.value = " ";
 })
