@@ -1,4 +1,26 @@
-
+let nav=document.querySelector("nav");
+function updatebackground()
+{
+    if(window.scrollY> window.screen.height)
+    {
+        nav.classList.add('scrolled');
+    }
+    else if(window.scrollY<= window.screen.height){
+        nav.classList.remove('scrolled');;
+    }
+}
+window.addEventListener("scroll",updatebackground);
+function resetbackground()
+{
+    if(window.scrollY<window.screen.height)
+    {
+        nav.classList.add('back_scrolled');
+    }
+    else if(window.scrollY> window.screen.height){
+        nav.classList.remove('back_scrolled');;
+    }
+}
+window.addEventListener("scroll",resetbackground);
 
 let line_icon = document.querySelector("nav .icon i:first-child");
 let cross_icon = document.querySelector("nav .icon i:last-child")

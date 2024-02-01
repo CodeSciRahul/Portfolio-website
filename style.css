@@ -10,6 +10,7 @@
 }
 
 :root {
+    color: rgba(8, 62, 199, 0.603);
     --bg: #1b1f24;
     --text-color: #fff;
     --other-color: #c3cad5;
@@ -38,10 +39,10 @@ header nav {
     justify-content: space-around;
     align-items: center;
     color: white;
-    height: 70px;
-    padding: 50px 0;
+    position: fixed;
+    z-index: 20;
+    width: calc(100vw);
 }
-
 header nav h1::first-letter {
     font-size: 3rem;
     color: #1276cd;
@@ -95,8 +96,11 @@ main {
     justify-content: space-around;
     flex-wrap: wrap-reverse;
     align-items: center;
-    min-height: calc(100vh - 180px);
+    min-height:100vh;
     color: white;
+    position: relative;
+    top: 80px;
+    padding-bottom: 90px;
 }
 
 main .intro {
@@ -564,12 +568,13 @@ footer {
     min-height: 80px;
     font-size: 1.2rem;
     position: relative;
+    /* overflow-x: hidden; */
 }
 
 footer span {
     position: absolute;
     top: -70px;
-    left: 90%;
+    left: 80%;
     right: 30%;
     background-color: #0f86ee;
     width: 50px;
@@ -591,6 +596,50 @@ footer .text {
     text-align: center;
 }
 
+.scrolled{
+    background-color: rgba(8, 62, 199, 0.803);
+    animation: scroll 0.5s ease-in-out;
+}
+@keyframes scroll {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0.15;
+    }
+    50%{
+        opacity: 0.3;
+    }
+    75%{
+        opacity: 0.45;
+    }
+    100%{
+        opacity:0.603;
+    }
+    
+}
+.back_scrolled{
+    background-color: transparent;
+    animation: back_scroll 0.5s ease-in-out;
+}
+@keyframes back_scroll {
+    0%{
+        opacity: 0.603;
+    }
+    25%{
+        opacity: 0.45;
+    }
+    50%{
+        opacity: 0.3;
+    }
+    75%{
+        opacity: 0.15;
+    }
+    100%{
+        opacity:0;
+    }
+    
+}
 
 /* responsive design */
 
@@ -610,12 +659,14 @@ footer .text {
     header .list {
         position: absolute;
         z-index: 20;
-        width: calc(100vw - 17px);
+        top: 73.5px;
+        width: calc(100vw);
         text-align: center;
-        background-color: #0f86ee;
+        background-color:  rgba(8, 62, 199, 0.403);;
         display: flex;
         align-items: center;
         justify-content: center;
+        position: fixed;
     }
 
     header .list ul {
