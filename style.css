@@ -305,6 +305,7 @@ i {
     flex-direction: column;
     justify-content: center;
     gap: 30px;
+    overflow-x: hidden;
 }
 
 .img_1 {
