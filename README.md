@@ -25,6 +25,5 @@ Frontend: HTML, CSS, JavaScript
 4.)
 ![Screenshot 2024-02-04 190540](https://github.com/CodeSciRahul/Portfolio-website/assets/142343501/1fb4471e-a5b9-4443-84c1-168bf638ff9f)
 
-# Cont
-ributions
+# Contributions
 Contributions are welcome! If you find any bugs or have ideas for improvement, please open an issue or submit a pull request.
