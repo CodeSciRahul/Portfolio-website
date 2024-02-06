@@ -119,10 +119,31 @@ main .intro h1::first-letter {
     color: #1276cd;
 }
 
-main .intro h1::after {
+main .intro p span::after {
     content: '👋';
-    font-size: var(--h1-font);
+    font-size: 3.5rem;
     margin-left: 10px;
+    animation:  move 1.2s infinite linear;
+    position: absolute;
+    top: -45px;
+}
+@keyframes move {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(15deg);
+    }
+    50%{
+        transform: rotate(30deg);
+    }
+    75%{
+        transform: rotate(15deg)
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+    
 }
 
 main .intro h1 {
@@ -143,6 +164,7 @@ main .intro p::first-letter {
 main .intro p span {
     color: #0f86ee;
     font-weight: bold;
+    position: relative;
 }
 
 main .intro p span::first-letter {
@@ -571,6 +593,7 @@ footer {
     min-height: 80px;
     font-size: 1.2rem;
     position: relative;
+    padding: 0 20px;
 }
 
 footer span {
@@ -649,7 +672,9 @@ footer .text {
     nav .icon {
         display: block;
     }
-
+    /* main .intro p span::after{
+        font-size: 2.5rem;
+    } */
     nav .icon i:last-child {
         display: none;
     }
@@ -704,7 +729,10 @@ footer .text {
     main .intro p::first-letter {
         font-size: 2rem;
     }
-
+    main .intro p span::after{
+        font-size: 2.3rem;
+        top: -20px;
+    }
     main .intro {
         margin: 0 20px;
         overflow-x: hidden;
