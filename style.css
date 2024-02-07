@@ -206,7 +206,16 @@ button:active {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.01s, box-shadow 0.1s;
 }
-
+.resumemsg{
+    color: rgb(0, 248, 0);
+    text-shadow: 2px 2px 20px currentColor;
+    font-weight: bold;
+    display: none;
+}
+.getdownload{
+    display: none;
+    color: var(--text-color);
+}
 main .intro_img {
     margin: 30px 0;
     width: 400px;

@@ -64,6 +64,24 @@ cross_icon.addEventListener("click", () => {
     line_icon.style.display = "block";
     cross_icon.style.display = "none";
 })
+let btndownload=document.querySelector(".btn a");
+btndownload.addEventListener("click", ()=>{
+    let get=document.querySelector(".getdownload");
+    get.style.display="block";
+    let displaymsg=document.querySelector(".resumemsg");
+    setTimeout(() => {
+        get.style.display="none";
+        displaymsg.style.display="block"
+    }, 2000);
+    
+})
+
+
+
+
+
+
+
 let marks = document.getElementById("h31").innerText;
 let counter = 0;
 setInterval(() => {
