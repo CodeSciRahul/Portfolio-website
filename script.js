@@ -77,11 +77,6 @@ btndownload.addEventListener("click", ()=>{
 })
 
 
-
-
-
-
-
 let marks = document.getElementById("h31").innerText;
 let counter = 0;
 setInterval(() => {
@@ -143,6 +138,19 @@ setInterval(() => {
         counter_4 += 2;
         document.getElementById("h35").innerText = counter_4 + "%";
         marks_4 = counter_4;
+    }
+}, 120);
+
+let marks_5 = document.getElementById("h36").innerText;
+let counter_5 = 0;
+setInterval(() => {
+    if (marks_5 == 72) {
+        clearInterval();
+    }
+    else {
+        counter_5 += 2;
+        document.getElementById("h36").innerText = counter_5 + "%";
+        marks_5 = counter_5;
     }
 }, 120);
 
